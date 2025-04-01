@@ -17,8 +17,10 @@ Tutorial on how to use dagster to build a data pipeline
 - **Schedule**: a way to automate **assets** or **jobs** to occur on a specified interval.
 - **Sensor**: a way to trigger **assets** or **jobs** when an event occurs.
 
+The relation maps of Dagster concepts:
+
 ```mermaid
-flowchart LR
+flowchart TD
 id1(Asset) -- a selection of assets --> id2(Job)
 id1 -- defined in --> id3(Definitions)
 id2 -- defined in --> id3(Definitions)
