@@ -6,6 +6,7 @@ Tutorial on how to use dagster to build a data pipeline
 - **Asset**: a logical unit of data such as a table, dataset, or machine learning model.
 - **Job**: a subset of **assets**.
 - **Resource**: a configurable external dependency, used to manage connections to external systems.
+- **IO Manager**: defines how data is stored and retrieved between the execution of **assets** and **ops**.
 - **Definitions**: a top-level construct that contains references to all the objects of a Dagster project, including
   - assets
   - jobs
@@ -28,4 +29,6 @@ id5 -- defined in --> id3(Definitions)
 id6(Resource) -- used by --> id1
 id6 -- defined in --> id3(Definitions)
 id3 -- deployed into --> id7(Code Location)
+id8(IO Manager) -- used by --> id1
+id8 -- defined in --> id3(Definitions)
 ```
